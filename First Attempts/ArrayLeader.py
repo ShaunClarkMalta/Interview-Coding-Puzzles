@@ -26,6 +26,16 @@ def array_leader(this_list):
         pos += 1
     return result
 
+def array_leader_mod(this_list):
+    result = []
+    current_leader = -1
+
+    for i in this_list[::-1]:
+        if (i >= current_leader):
+            current_leader = i
+            result.append(i)
+    return result[::-1]
+
 test_array1 = [16, 17, 4, 3, 5, 2]
 test_array2 = [10, 4, 2, 4, 1]
 test_array3 = [5, 10, 20, 40]
@@ -34,3 +44,7 @@ print(f"Array Leaders for Test 1: {array_leader(test_array1)}")
 print(f"Array Leaders for Test 2: {array_leader(test_array2)}")
 print(f"Array Leaders for Test 3: {array_leader(test_array3)}")
 print(f"Array Leaders for Test 4: {array_leader(test_array4)}")
+print(f"\nModified Array Leaders for Test 1: {array_leader_mod(test_array1)}")
+print(f"Modified Array Leaders for Test 2: {array_leader_mod(test_array2)}")
+print(f"Modified Array Leaders for Test 3: {array_leader_mod(test_array3)}")
+print(f"Modified Array Leaders for Test 4: {array_leader_mod(test_array4)}")
