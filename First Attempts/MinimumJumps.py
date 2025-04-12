@@ -37,4 +37,4 @@ print(f"Array 1: Minimum Jumps - {min_jumps(test_array1)}")
 print(f"Array 2: Minimum Jumps - {min_jumps(test_array2)}")
 print(f"Array 3: Minimum Jumps - {min_jumps(test_array3)}")
 
-#I believe that this is wrong and I need to look into a better solution
+#I believe that this is wrong and I need to look into a better solution - Have a better solution on paper, and need to implement it
