@@ -11,7 +11,7 @@ def binary_search(target, this_list):
         mid = left + (right - left)//2 #Calculate mid point
         if this_list[mid] == target:
             result = mid
-            right = mid - 1
+            right = mid - 1 #Asked for first instance, hence continuing to check to the left
         
         elif mid > target:  #Then must be to the left array
             right = mid - 1
