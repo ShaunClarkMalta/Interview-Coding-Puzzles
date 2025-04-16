@@ -8,6 +8,6 @@ I found a list of websites which seem useful (thanks to [Anushka's Post here](ht
 - First, I will be coding in a way that makes sense to me
 - Then, I will revisit them and look for more efficient solutions.
 
-Starting with the exercises proposed in [Geeks for Geeks](https://www.geeksforgeeks.org/explore?page=1&sortBy=submissions).
+Starting with the exercises proposed in [Geeks for Geeks](https://www.geeksforgeeks.org/explore?page=1&sortBy=submissions) and [LeetCode](https://leetcode.com/problemset/algorithms/).
 
 I am here to learn and improve my skills, so as always - feedback is more than welcome :)
