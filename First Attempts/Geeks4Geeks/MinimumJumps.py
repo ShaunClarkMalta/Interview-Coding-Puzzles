@@ -14,7 +14,7 @@ if x = 0; result = -1
 largest [i+1, ... i+x]
 jumps += 1'''
 
-def min_jumps(this_list):
+'''def min_jumps(this_list):
     result = 0
     pos = 0
     end_flag = len(this_list)-1
@@ -28,7 +28,40 @@ def min_jumps(this_list):
         maximum = max(subset_list)
         pos = pos + (len(subset_list)-subset_list.index(maximum))
         result +=1
+    return result'''
+
+def min_jumps(this_list):
+    jumps = 1
+    max_reach = 0
+    current_reach = 0
+    pos = 0
+    result = -1
+    end_list = (len(this_list) -1)
+    
+    if (this_list[0] == 0):
+        return result
+    
+    while (max_reach < end_list):
+        max_reach = pos + this_list[pos]
+        counter = 1
+        jumps += 1
+        subset_list = this_list[pos+1:(max_reach+1):]
+        for i in subset_list:
+            current_reach = i + (pos + counter)
+            if current_reach > max_reach:
+                max_reach = current_reach
+                step = pos + counter
+            counter += 1
+        pos = step
+    result = jumps
     return result
+
+test1 = [1,3,8,5,8,9,2,6,7,6,8,9,5,7,6,5,1,5,4,2,3,1]
+test2 = [1, 4, 3, 2, 6, 7]
+test3 = [0, 10, 20]
+print(f"Result for Test 1: {min_jumps(test1)}")
+print(f"Result for Test 2: {min_jumps(test2)}")
+print(f"Result for Test 3: {min_jumps(test3)}")
 
 test_array1 = [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]
 test_array2 = [1, 4, 3, 2, 6, 7]
