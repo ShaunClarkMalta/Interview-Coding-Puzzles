@@ -10,4 +10,11 @@ I found a list of websites which seem useful (thanks to [Anushka's Post here](ht
 
 Starting with the exercises proposed in [Geeks for Geeks](https://www.geeksforgeeks.org/explore?page=1&sortBy=submissions) and [LeetCode](https://leetcode.com/problemset/algorithms/).
 
+---
+In ***First Attempts***, I place my first goes at the problems encountered, tackling them without any time constraints on myself or the pressure from interviews. The idea is to see how well I can do on my own steam.
+
+If I have any issues or come across new topics that I find more complex, I may create new folders where I can work on and improve those skills.
+
+---
+
 I am here to learn and improve my skills, so as always - feedback is more than welcome :)
