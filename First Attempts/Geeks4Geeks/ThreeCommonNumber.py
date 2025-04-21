@@ -60,3 +60,7 @@ array1 = [1,3,4,5]
 array2 = [3,5,7,9]
 array3 = [3,6]
 print(f"The results are: {common_num(array1, array2, array3)}")
+
+
+
+#Attempt the same for 'x' amount of lists //First thoughts: Have an array holding the pointers
