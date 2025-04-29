@@ -32,9 +32,16 @@ Example 3:
 Input: s = "A", numRows = 1
 Output: "A"
 '''
+
+''' Input: Word, Rows
+- Counter starting at 0
+Add Letter to Row, Increments Counter
+if counter = row_length-1, then go in reverse order
+'''
+
 #Purely to see how best I can recreate the pattern via nested lists
-def test_array_print():
-    row1 = [1.1, "", 1.3, 1.4, 1.5]
+'''def test_array_print():
+    row1 = [1.1, 1.2, 1.3, 1.4, 1.5]
     row2 = [2.1, 2.2, 2.3, 2.4, 2.5]
     row3 = [3.1, 3.2, 3.3, 3.4, 3.5]
 
@@ -42,6 +49,54 @@ def test_array_print():
     for rows in test:
         print(rows)
 
-word = "example"
-rows = 5
-test_array_print()
+test_array_print()'''
+
+def zigzag_conversion(word, number_rows):
+    counter = 0
+    reverse = False
+    rows = []
+    result = []
+
+    #Create necessary rows based on 'number_rows'
+    for i in range(number_rows):
+        rows.append([])
+
+    #if len(word) == 1; return word
+    if (len(word) == 1) or (number_rows == 1):
+        return word
+    
+    #Iterate through letters, assigning each to the end of the appropriate row
+    for letter in word:
+        rows[counter].append(letter)
+
+        #Check limits to change direction. If counter == 0, must increment and reverse = False. If counter == len(word)-1, decrement and reverse = True 
+        if counter == 0:
+            reverse = False
+            counter += 1
+
+        elif counter == (number_rows-1):
+            reverse = True
+            counter -= 1
+
+        else:
+            if reverse == False:
+                counter += 1
+            else:
+                counter -= 1
+
+    for row in rows:
+        for element in row:
+            result.append(element)
+
+    return "".join(result)
+
+word = "PAYPALISHIRING"
+rows = 3
+print(f"{word} in {rows} rows: {zigzag_conversion(word, rows)}")
+rows = 4
+print(f"{word} in {rows} rows: {zigzag_conversion(word, rows)}")
+word = "A"
+rows = 1
+print(f"{word} in {rows} rows: {zigzag_conversion(word, rows)}")
+
+#Future improvement could be to actually print the Word in the Zigzag pattern
