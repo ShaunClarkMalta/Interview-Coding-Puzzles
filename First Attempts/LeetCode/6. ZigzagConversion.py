@@ -32,3 +32,16 @@ Example 3:
 Input: s = "A", numRows = 1
 Output: "A"
 '''
+#Purely to see how best I can recreate the pattern via nested lists
+def test_array_print():
+    row1 = [1.1, "", 1.3, 1.4, 1.5]
+    row2 = [2.1, 2.2, 2.3, 2.4, 2.5]
+    row3 = [3.1, 3.2, 3.3, 3.4, 3.5]
+
+    test = [row1, row2, row3]
+    for rows in test:
+        print(rows)
+
+word = "example"
+rows = 5
+test_array_print()
