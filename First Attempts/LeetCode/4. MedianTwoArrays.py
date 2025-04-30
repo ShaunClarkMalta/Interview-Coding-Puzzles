@@ -1,7 +1,4 @@
 '''Median of Two Sorted Arrays
-Hard
-Topics
-Companies
 Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
 
 The overall run time complexity should be O(log (m+n)).
@@ -26,3 +23,7 @@ length = len(n) + len(m)
 - Take length/2 left-hand elements from list 1,, Same from list 2 (If odd number, take from list 1)
 - Check that max in both lists < min of leftover elements
 - Adjust pointers accordingly and repeat'''
+
+def median_two_arrays(list1, list2):
+    length = len(list1) + len(list2)
+    ...
